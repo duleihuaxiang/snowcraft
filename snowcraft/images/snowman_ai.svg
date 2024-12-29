@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100" height="150" viewBox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
+    <!-- 雪人底部 -->
+    <circle cx="50" cy="110" r="35" fill="white" stroke="black" stroke-width="2"/>
+    <!-- 雪人中部 -->
+    <circle cx="50" cy="60" r="25" fill="white" stroke="black" stroke-width="2"/>
+    <!-- 雪人头部 -->
+    <circle cx="50" cy="25" r="20" fill="white" stroke="black" stroke-width="2"/>
+    <!-- 眼睛 -->
+    <circle cx="43" cy="20" r="3" fill="black"/>
+    <circle cx="57" cy="20" r="3" fill="black"/>
+    <!-- 胡萝卜鼻子 -->
+    <path d="M50,25 L55,25 L50,30 Z" fill="orange"/>
+    <!-- 围巾 -->
+    <path d="M30,45 Q50,55 70,45" stroke="red" stroke-width="4" fill="none"/>
+</svg>

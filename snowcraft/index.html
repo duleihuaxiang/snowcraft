@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打雪仗游戏</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #87CEEB;
+            font-family: Arial, sans-serif;
+        }
+        #gameContainer {
+            position: relative;
+        }
+        #startMenu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        #startButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #startButton:hover {
+            background: #45a049;
+        }
+        #score {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        #level {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        #gameCanvas {
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="score">得分: 0</div>
+        <div id="level">第1关</div>
+        <div id="startMenu">
+            <h2>雪球大战</h2>
+            <p>用鼠标拖动雪人移动<br>按住鼠标蓄力，松开发射雪球</p>
+            <button id="startButton">开始游戏</button>
+        </div>
+    </div>
+    <!-- 先加载所有的依赖类 -->
+    <script src="sound.js"></script>
+    <script src="particle.js"></script>
+    <script src="player.js"></script>
+    <script src="snowball.js"></script>
+    <script src="ai.js"></script>
+    <!-- 最后加载游戏主类 -->
+    <script src="game.js"></script>
+    <script>
+        // 等所有脚本都加载完毕后再创建游戏实例
+        window.onload = function() {
+            const game = new Game();
+        };
+    </script>
+</body>
+</html>
